@@ -1,11 +1,14 @@
+import { useState } from "react";
+
 function User(){  // functional component
+    const [data,setData]=useState(0);
     function test(){
-        alert('test')
+        setData(data+1);
     }
     return (
         <>
         <h1>User component</h1>
-        <h1>hello</h1> 
+        <h1>{data}</h1> 
         <button onClick={test}>click</button> 
         </> // in react we can only 
     )
